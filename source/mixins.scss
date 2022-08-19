@@ -1,0 +1,15 @@
+//-----Шрифты
+@mixin fontPoppins($weight, $size, $color) {
+	font-family: 'Poppins', sans-serif;
+	font-weight: $weight;
+	font-size: $size;
+	color: $color;
+}
+@mixin button($width, $height) {
+	width: $width;
+	height: $height;
+	background-color: #FF3928;
+	color: white;
+	border-radius: 5% 5% 5% 5% / 5% 5% 5% 5%;
+	text-align: center;
+}

@@ -1,0 +1,100 @@
+@import "mixins.scss";
+.wrapper {
+	max-width: 100%;
+	overflow: hidden;
+	gap: 0px 0px;
+}
+
+.header {
+}
+
+
+
+.container {
+	display: grid;
+	grid-template-columns: 1.30fr 3.6fr 1fr 1fr;
+	grid-template-rows: 100px 1fr;
+	gap: 0px 0px;
+	grid-template-areas:
+	"logo menu button social"
+	"main-img main-img main-img main-img"
+	". . . ."
+}
+
+.main-img {
+	grid-area: main-img;
+	&__box {
+	}
+	&__picture {
+		width: 100%;
+	}
+}
+
+
+.logo {
+	grid-area: logo;
+	&__img {
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+
+.menu {
+	grid-area: menu;
+	&__list {
+			display: grid;
+			grid-template-columns: repeat(5, 86px);
+			grid-template-rows: 1fr;
+			gap: 0px 26px;
+			align-items: center;
+			list-style: none;
+			height: 100%;
+			padding-left: 51px
+		
+		}
+	
+	&__link {
+		@include fontPoppins(500, 16px, black);
+		text-decoration: none;
+		color: black;
+		justify-self: start;
+		align-items: center;
+	}
+}
+
+
+.button {
+	grid-area: button;
+	&__container {
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__book {
+		@include fontPoppins(400, 16px, white);
+		@include button(120px, 35px);
+		line-height: 36px;
+	}
+}
+
+
+.social {
+	grid-area: social;
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(5, 21px);
+		grid-template-rows: 1fr;
+		gap: 0px 18px;
+		justify-content: start;
+		align-items: center;
+		height: 100%;
+	}
+
+	&__item {
+	}
+}

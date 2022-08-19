@@ -1,0 +1,122 @@
+@import "mixins.scss";
+.services {}
+
+.container-pro-s {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 0.1fr 0.1fr 2fr;
+		grid-auto-columns: 1fr;
+		gap: 0px 0px;
+		grid-auto-flow: row;
+		grid-template-areas:
+			"."
+			"."
+			".";
+}
+
+.main-title {
+	width: 100%;
+	&__pro {
+		margin-bottom: 35px;
+		text-align: center;
+		@include fontPoppins(600, 50px, black);
+	}
+}
+
+.menu-pro {
+	width: 100%;
+	&__list {
+		display: flex;
+		justify-content: center;
+		gap: 40px;
+		margin-bottom: 40px;
+	}
+
+	&__item {}
+
+	&__link {
+		@include fontPoppins(400, 18px, black);
+		color: #B4B4B4;
+	}
+}
+.container-ss {
+	display: grid;
+	grid-template-columns: minmax(0px, 0.96fr) minmax(0px, 0.96fr) minmax(0px, 2.18fr);
+	grid-template-rows: 1fr 1fr 0.2fr 156px;
+	gap: 25px 28px;
+	max-width: 1560px;
+	margin: 0 auto;
+	grid-template-areas:
+		"top-left-img top-right-img main-img"
+		"center-left-img center-right-img main-img"
+		"left-arrow right-arrow main-img"
+		"space space space";
+}
+.slide-show {
+	width: 100%;
+	&__img {
+		width: 100%;
+		&_big-one {
+			width: 100%;
+		}
+	}
+	&__left-arrow {
+		text-align: center;
+	}
+
+	&__main-img {
+		grid-area: main-img;
+	}
+
+	&__right-arrow {
+		text-align: center;
+	}
+
+	&__top-left-img {
+		grid-area: top-left-img;
+		position: relative;
+		&_button {
+			position: absolute;
+			bottom: 50px;
+			left: 21px;
+			@include button(90px, 25px);
+			@include fontPoppins(400, 12px, white);
+			text-transform: uppercase;
+			line-height: 24px;
+		}
+		&_link {
+			@include fontPoppins(400, 18px, white);
+			position: absolute;
+			left: 21px;
+			bottom: 20px;
+			color: white;
+			display: flex;
+			&:after {
+				content: "";
+				display: block;
+				width: 30px;
+				height: 16px;
+				background-image: url(img/main/arrow.png);
+				margin-top: 2px;
+				margin-left: 10px;
+			}
+			
+		}
+	}
+	
+
+	&__top-right-img {
+		grid-area: top-right-img;
+	}
+
+	&__center-left-img {
+		grid-area: center-left-img;
+	}
+
+	&__center-right-img {
+		grid-area: center-right-img;
+	}
+	&__space {
+		grid-area: space;
+	}
+}

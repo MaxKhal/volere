@@ -1,0 +1,110 @@
+@import "mixins.scss";
+@import "tag-selectors.scss";
+.tips {}
+
+.container-tips {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr 1fr;
+			grid-auto-columns: 1fr;
+			grid-template-areas:
+				"headshots five-tips"
+				"headshot-ser headshot-ser";
+}
+p {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	color: black;
+	line-height: 30px;
+}
+.headshots {
+	grid-area: headshots;
+	&__box {
+		width: 650px;
+		margin: 0 auto;
+	}
+	&__title {
+	}
+
+	&__text {
+	}
+		
+}
+
+.container-hs {}
+
+.five-tips {
+	grid-area: five-tips;
+	&__title {
+		font-family: 'Conv_Tahu!';
+		font-size: 60px;
+		margin-bottom: 73px;
+	}
+
+	&__reveal-tips {}
+}
+
+.container-ft {}
+
+.reveal-tips {
+
+	&__box {
+		width: 350px;
+		display: flex;
+		margin-right: 80px;
+		margin-bottom: 40px;
+		border-bottom: 1px solid #CDCDCD;
+		padding-bottom: 10px;
+	}
+	&__box:last-child {
+		position: relative;
+		left: 430px;
+	}
+	&__img {}
+
+	&__text {
+		@include fontPoppins(400, 16px, black);
+		padding-left: 27px;
+	}
+}
+
+.container-rt {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	height: auto;
+}
+
+.headshot-ser {
+	grid-area: headshot-ser;
+	position: relative;
+	top: -45px;
+	&__arrow {
+		position: absolute;
+		top: -80px;
+		left: 140px;
+	}
+	&__box {
+		max-width: 970px;
+		max-height: 360px;
+		background-color: #1C1C1C;
+		padding: 55px 80px;
+		position: absolute;
+		left: 243px;
+	}
+
+	&__title {
+		font-size: 22px;
+		color: white;
+		text-transform: uppercase;
+		margin-bottom: 45px;
+	}
+
+	&__text {
+		color: white;
+		margin-bottom: 45px;
+	}
+}
+
+.container-hsser {}
